@@ -128,8 +128,8 @@
       let actor=role,access=role.startsWith('finance')?'finance':role;
       if(role==='seller'||role==='buyer'){access='customer';actor=role==='seller'?r?.owner:r?.buyer||r?.payer;actor ||= 'person-demo-'+role;}
       setSession({actor,role:access});
-      if(access!=='customer')location.href='/admin.html#admin';else location.href='/index.html'+(r?'#record/'+r.id:'#home');
-      location.reload();
+      const target=access!=='customer'?'/admin.html#admin':'/index.html'+(r?'#record/'+r.id:'#home');
+      if(location.pathname+location.hash===target)location.reload();else location.assign(target);
     });
     panel.querySelector('button').addEventListener('click',()=>{if(confirm('Clear all demo records saved in this browser?')){localStorage.removeItem(STORE);sessionStorage.clear();location.href='/';}});
     const observer=new MutationObserver(()=>{
