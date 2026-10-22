@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#afb5ff">
+  <meta name="description" content="Handshake — protected deals and simple payment acceptance. Browser-only interactive demo.">
+  <title>Handshake · Staff workspace</title>
+  <link rel="icon" href="/assets/soft-elephant.png">
+  <link rel="stylesheet" href="/app.css?v=mobile-2"><link rel="stylesheet" href="/mascot.css?v=3"><link rel="stylesheet" href="/mobile-app.css?v=2">
+  <script defer src="/demo-qrcode.js"></script><script defer src="/demo-api.js"></script><script defer src="/mascot.js?v=3"></script><script defer src="/mobile-shell.js?v=1"></script><script defer src="/app.js?v=mobile-1"></script>
+</head>
+<body class="admin-app">
+  <div class="simulation">Browser demo <span>Payments use simulated funds</span></div>
+  <header class="app-header"><a class="brand" href="#home" aria-label="Handshake home"><span class="brandmark" aria-hidden="true">h.</span>handshake</a><div class="app-header-right"><span class="demo-tag">Demo</span><a class="account-button" href="#access" aria-label="Your private account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></a></div></header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#admin"><span class="brandmark">h.</span>handshake</a>
+      <nav>
+        <a href="#admin" data-nav="admin"><span aria-hidden="true">⌂</span> Workspace</a>
+        
+        
+      </nav>
+      <div class="sidebar-bottom"><a href="#access" data-nav="access">Staff account</a><a href="#help" data-nav="help">How it works</a><p>Staff workspace.<br>Browser demo.</p></div>
+    </aside>
+    <main id="app" tabindex="-1" aria-live="polite"><div class="loading">Opening Handshake…</div></main>
+  </div>
+  <nav class="app-tabs" aria-label="App navigation">
+    <a href="#home" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Home</span></a>
+    <a href="#activity" data-tab="activity"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span>Activity</span></a>
+    <a href="#code" data-tab="code"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 8h2v2H8zm6 0h2v2h-2zM8 14h2v2H8zm6 0h2v2h-2z"/></svg><span>Enter code</span></a>
+    <a href="#access" data-tab="access"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Account</span></a>
+  </nav>
+  <div id="toast" role="status"></div>
+</body>
+</html>
